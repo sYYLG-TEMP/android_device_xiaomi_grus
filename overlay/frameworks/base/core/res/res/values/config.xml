@@ -517,4 +517,7 @@
     <bool name="config_needCustomFODView">true</bool>
 
     <string name="config_mainBuiltInDisplayCutout">M-138,0 C-100.319015,0 -78.8094286,11.585036 -56.9106598,48.2868587 C-45.0899716,68.1052477 -23.8069241,81 0.002904346,81 C23.8127328,81 45.0899716,68.1052477 56.9164685,48.2868587 C78.8094286,11.585036 100.324824,0 138,0 L-138,0 Z</string>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>
