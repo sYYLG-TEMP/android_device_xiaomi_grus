@@ -128,10 +128,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     mokee.trust@1.0-service
 
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk_package
-
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
