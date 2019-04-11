@@ -171,3 +171,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Config panel
+PRODUCT_PACKAGES += \
+    ConfigPanel
