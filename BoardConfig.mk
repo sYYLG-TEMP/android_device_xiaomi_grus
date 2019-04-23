@@ -146,5 +146,8 @@ BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# VNDK
+BOARD_VNDK_RUNTIME_DISABLE := false
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/grus/BoardConfigVendor.mk
