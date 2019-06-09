@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_grus.mk
+    $(LOCAL_DIR)/havoc_grus.mk

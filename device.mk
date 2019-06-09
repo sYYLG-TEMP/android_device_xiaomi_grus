@@ -9,6 +9,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
+# Call ThirdParty
+$(call inherit-product-if-exists, device/xiaomi/grus/thirdparty/config.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/grus/grus-vendor.mk)
 
@@ -20,8 +23,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-mokee
+    $(LOCAL_PATH)/overlay
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -50,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    #XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -59,10 +61,10 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    mokee.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
+    lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml
+    $(LOCAL_PATH)/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus.rc:system/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_grus.rc
@@ -94,7 +96,7 @@ PRODUCT_COPY_FILES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    mokee.livedisplay@2.0-service-sdm
+    lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -161,10 +163,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    mokee.trust@1.0-service
-
 # VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
@@ -175,7 +173,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Config panel
-PRODUCT_PACKAGES += \
-    ConfigPanel
