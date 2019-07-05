@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    mokee.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
