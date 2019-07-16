@@ -48,10 +48,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm845.rc:system/etc/init/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm845.rc
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -89,10 +85,6 @@ PRODUCT_COPY_FILES += \
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
-
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom:64
 
 # QTI
 PRODUCT_COPY_FILES += \
