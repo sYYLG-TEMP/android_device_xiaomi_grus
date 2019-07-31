@@ -6,12 +6,6 @@
 # Data files
 /data/display(/.*)?                 u:object_r:display_data_file:s0
 
-# Files in rootfs
-/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
-/dsp(/.*)?               u:object_r:adsprpcd_file:s0
-/firmware(/.*)?          u:object_r:firmware_file:s0
-/persist(/.*)?           u:object_r:persist_file:s0
-
 # Fingerprint under display HAL
 /system/bin/hw/mokee\.biometrics\.fingerprint\.inscreen@1.0-service\.xiaomi_grus    u:object_r:hal_fod_grus_exec:s0
 
