@@ -24,5 +24,8 @@
 # LiveDisplay HAL
 /system/bin/hw/mokee\.livedisplay@2\.0-service-sdm                   u:object_r:shal_livedisplay_default_exec:s0
 
+# Media
+/system/etc/media_codecs.xml    u:object_r:vendor_configs_file:s0
+
 # Trust HAL
 /system/bin/hw/mokee\.trust@1\.0-service                             u:object_r:shal_mokee_trust_default_exec:s0
