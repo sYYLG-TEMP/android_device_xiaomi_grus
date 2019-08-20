@@ -42,6 +42,8 @@ lib/libdpmtcm.so
 
 # Display postprocessing
 lib64/vendor.display.color@1.0.so
+lib64/vendor.display.color@1.1.so
+lib64/vendor.display.color@1.2.so
 
 # IMS
 -app/uceShimService/uceShimService.apk
