@@ -8,6 +8,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>1.0-1</version>
         <interface>
@@ -21,14 +29,6 @@
         <interface>
             <name>IGnss</name>
             <instance>gnss_vendor</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.ir</name>
-        <version>1.0</version>
-        <interface>
-            <name>IConsumerIr</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -170,10 +170,34 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IGoodixFingerprintDaemon</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.goodix.hardware.fingerprintextension</name>
+        <version>1.0</version>
+        <interface>
+            <name>IGoodixBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.nxp.hardware.nfc</name>
         <version>1.0</version>
         <interface>
             <name>INqNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.nxp.nxpnfc</name>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -197,14 +221,6 @@
         <name>vendor.qti.gnss</name>
         <version>1.0-2</version>
         <version>2.0</version>
-        <interface>
-            <name>ILocHidlGnss</name>
-            <instance>gnss_vendor</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.gnss</name>
-        <version>2.1</version>
         <interface>
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
@@ -260,6 +276,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchCompanion</name>
+            <instance>TouchCompanionService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.iop</name>
         <version>2.0</version>
         <interface>
@@ -268,15 +292,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.mlshal</name>
+        <name>vendor.qti.hardware.limits</name>
         <version>1.0</version>
         <interface>
-            <name>IMlsDap</name>
-            <instance>mlsdaphal</instance>
-        </interface>
-        <interface>
-            <name>IMlsVnc</name>
-            <instance>mlsvnchal</instance>
+            <name>IThermal</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -355,6 +375,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim</name>
+        <version>1.0</version>
         <version>1.1</version>
         <interface>
             <name>IUim</name>
@@ -365,6 +386,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
@@ -378,14 +400,6 @@
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
             <instance>uimRemoteServer1</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.scve.objecttracker</name>
-        <version>1.0</version>
-        <interface>
-            <name>IObjectTracker</name>
-            <instance>objectTracker</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -427,22 +441,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.vpp</name>
         <version>1.0-1</version>
-        <interface>
-            <name>IHidlVppService</name>
-            <instance>vppService</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.vpp</name>
-        <version>1.1-2</version>
-        <interface>
-            <name>IHidlVppService</name>
-            <instance>vppService</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.vpp</name>
-        <version>1.2</version>
         <interface>
             <name>IHidlVppService</name>
             <instance>vppService</instance>
@@ -529,10 +527,50 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.citsensorservice</name>
+        <version>1.1</version>
+        <interface>
+            <name>ICitSensorService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.displayfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayFeature</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.fingerprintextension</name>
+        <version>1.0</version>
+        <interface>
+            <name>IXiaomiFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.mfidoca</name>
         <version>1.0</version>
         <interface>
             <name>IFidoService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.misys</name>
+        <version>1.0</version>
+        <interface>
+            <name>IMiSys</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.misys</name>
+        <version>2.0</version>
+        <interface>
+            <name>IMiSys</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -557,6 +595,14 @@
         <version>1.0-1</version>
         <interface>
             <name>ITidaService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.touchfeature</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchFeature</name>
             <instance>default</instance>
         </interface>
     </hal>
