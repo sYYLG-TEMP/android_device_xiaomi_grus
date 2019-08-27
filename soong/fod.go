@@ -9,7 +9,7 @@ import (
 func deviceFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("xiaomiSdm710FodPlugin")
+    var config = ctx.AConfig().VendorConfig("xiaomiGrusFodPlugin")
     var posX = strings.TrimSpace(config.String("posX"))
     var posY = strings.TrimSpace(config.String("posY"))
     var size = strings.TrimSpace(config.String("size"))
@@ -40,5 +40,5 @@ func fodHalBinaryFactory() android.Module {
 }
 
 func init() {
-    android.RegisterModuleType("xiaomi_sdm710_fod_hal_binary", fodHalBinaryFactory)
+    android.RegisterModuleType("xiaomi_grus_fod_hal_binary", fodHalBinaryFactory)
 }
