@@ -52,6 +52,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
 TARGET_KERNEL_CONFIG := mokee_grus_defconfig
+NEED_KERNEL_MODULE_SYSTEM := true
 
 # Platform
 #TARGET_BOARD_PLATFORM := sdm710
