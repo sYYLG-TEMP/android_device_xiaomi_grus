@@ -144,7 +144,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # VNDK
 BOARD_VNDK_RUNTIME_DISABLE := false
