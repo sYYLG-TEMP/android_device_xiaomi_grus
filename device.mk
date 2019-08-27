@@ -61,6 +61,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     mokee.biometrics.fingerprint.inscreen@1.0-service.xiaomi_grus
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.mokee.biometrics.fingerprint.inscreen.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
