@@ -17,6 +17,11 @@ allow shal_livedisplay_default binder_device:chr_file rw_file_perms;
 allow shal_livedisplay_default display_data_file:dir rw_dir_perms;
 allow shal_livedisplay_default display_data_file:file create_file_perms;
 
+# Allow LiveDisplay to access pps socket
+type mm-pp-daemon, domain;
+typeattribute mm-pp-daemon socket_between_core_and_vendor_violators;
+unix_socket_connect(shal_livedisplay_default, pps, mm-pp-daemon)
+
 # Allow LiveDisplay to read display props
 get_prop(shal_livedisplay_default, vendor_display_prop)
 
