@@ -79,7 +79,7 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[vendor/firmware_mnt/]
+[firmware/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
@@ -97,19 +97,19 @@ user: AID_ROOT
 group: AID_SYSTEM
 caps: 0
 
-[vendor/bt_firmware/]
+[bt_firmware/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[mnt/vendor/persist/]
+[persist/]
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: 0
 
-[vendor/dsp/]
+[dsp/]
 mode: 0771
 user: AID_MEDIA
 group: AID_MEDIA

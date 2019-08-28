@@ -6,6 +6,12 @@
 # Data files
 /data/display(/.*)?                 u:object_r:display_data_file:s0
 
+# Files in rootfs
+/bt_firmware(/.*)?       u:object_r:bt_firmware_file:s0
+/dsp(/.*)?               u:object_r:adsprpcd_file:s0
+/firmware(/.*)?          u:object_r:firmware_file:s0
+/persist(/.*)?           u:object_r:persist_file:s0
+
 # Fingerprint related nodes
 /sys/devices/platform/soc/soc:fingerprint_goodix/proximity_state   u:object_r:sysfs_fp_proximity:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                       u:object_r:sysfs_tp_fodstatus:s0
