@@ -1,5 +1,5 @@
 bootstrap_go_package {
-    name: "soong-fod-hal-binary",
+    name: "soong-xiaomi-grus-fod-hal-binary",
     pkgPath: "device/xiaomi/grus",
     deps: [
         "blueprint",
