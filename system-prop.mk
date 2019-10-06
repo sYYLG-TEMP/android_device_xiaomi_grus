@@ -15,7 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.sat.fallback.dist.d=5 \
     persist.camera.sat.fallback.luxindex=230 \
     persist.camera.sat.fallback.lux.d=50 \
-    camera.disable_zsl_mode=true
+    camera.disable_zsl_mode=true \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.mokee.snap
 
 # CNE and DPM
